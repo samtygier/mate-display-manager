@@ -2,7 +2,7 @@
 
 # fill it
 pkgname=mate-display-manager
-pkgver=2011.10.29
+pkgver=2011.12.01
 pkgrel=1
 pkgdesc="The MATE Display Manager"
 #depends="pam, libdmx, tcp_wrappers, mate-panel, libmatecanvas, librsvg, gksu, dbus-glib, consolekit, mate-dialogs"
