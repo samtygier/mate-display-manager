@@ -229,8 +229,8 @@ install-data-hook: mdm.conf-custom Xsession Init PostSession PreSession mateconf
 	fi
 
 	$(INSTALL_DATA) $(srcdir)/mateconf.path $(DESTDIR)$(workingdir)/.mateconf.path
-	mateconftool-2 --direct --config-source=xml:merged:$(DESTDIR)$(workingdir)/.mateconf.mandatory --recursive-unset /
-	mateconftool-2 --direct --config-source=xml:merged:$(DESTDIR)$(workingdir)/.mateconf.mandatory --load $(srcdir)/session-setup.entries
+	${MATECONFTOOL} --direct --config-source=xml:merged:$(DESTDIR)$(workingdir)/.mateconf.mandatory --recursive-unset /
+	${MATECONFTOOL} --direct --config-source=xml:merged:$(DESTDIR)$(workingdir)/.mateconf.mandatory --load $(srcdir)/session-setup.entries
 	chown -R root:mdm $(DESTDIR)$(workingdir)/.mateconf.mandatory || :
 	chmod 1750 $(DESTDIR)$(workingdir)/.mateconf.mandatory
 	chmod 1640 $(DESTDIR)$(workingdir)/.mateconf.mandatory/*.xml
